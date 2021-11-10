@@ -9,7 +9,7 @@ from flask import Flask, render_template, request
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 class_names = ['Organic','Plastic','Recyclable']
 
@@ -28,7 +28,7 @@ def load_image(img_path):
 def prediction(img_path):
     new_image = load_image(img_path)
     pred = model.predict(new_image)
-    # print(pred1)
+    print(pred)
     if len(pred[0]) > 1:
         pred_class = class_names[tf.argmax(pred[0])]
     else:
@@ -40,7 +40,11 @@ get_model()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
+
+@app.route("/webcam", methods=['GET', 'POST'])
+def webcam():
+    return render_template('webcam.html')
 
 @app.route("/predict", methods = ['GET','POST'])
 def predict():
