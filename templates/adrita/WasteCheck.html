@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel= "stylesheet" href= "css/responsive.css"/>
+  <link rel= "stylesheet" href= "css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+  <title>Upload Image</title>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark" id="nav-title">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top" >
+        WasteCheck
+      </a>
+    </div>
+  </nav>
+  <div class="wastecheck">
+    <div class="image-r">
+      <img src="img/three-r.png" alt="">
+    </div>
+  <h1 class="webcam-heading">Check your Waste</h1>
+  <p class="upload-photo">Hey, are you confused how to manage your daily waste effectively? </p>
+  <p>Just upload a picture of the item and WE will tell you everything you need to know!</p>
+  <div class="photo-upload">
+    <div class="col-sm">
+      <h1><span class="badge "><p>
+        Upload Photo 
+      </p>
+        </span></h1>
+    </div>
+    <div class="col-sm">
+      <form class = "form" action = "/predict" method = "post" enctype="multipart/form-data">
+          <input class="file" id = "files" type="file" name="file" />
+          <!-- <label for="files">Add Photo</label> -->
+          <input class="upload" type = "submit" value="Upload">
+      </form>
+    </div>
+  </div>
+  <a href="index.html" class="know-more">GO BACK HOME</a>
+  </div>
+  
+</body>
+<!-- <script src="{{ url_for('static', filename='js/index.js') }}"></script> -->
+</html>
