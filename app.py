@@ -16,7 +16,7 @@ import random
 from model import get_model,load_image, prediction
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-# get_model()
+get_model()
 
 photos = UploadSet('photos', IMAGES)
 
