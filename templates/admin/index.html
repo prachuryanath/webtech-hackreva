@@ -11,6 +11,11 @@
     <script src="{{ url_for('static', filename='js/ethjs-unit.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js" integrity="sha512-jRzb6jM5wynT5UHyMW2+SD+yLsYPEU5uftImpzOcVTdu1J7VsynVmiuFTsitsoL5PJVQi+OtWbrpWq/I+kkF4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/responsive.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark" id="nav-title">
@@ -21,7 +26,8 @@
           </a>
         </div>
       </nav>
-<div>
+     
+<div class="admin"> 
     <div class="col-lg-6 pad">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -29,11 +35,14 @@
             </div>
             <div class="panel-body">
                 Products available in the products catalog
+                <a href="admin/add" class="know-more" id="dashboard">ADD PRODUCTS</a>
+
             </div>
+
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
                     <thead>
-                        <tr>
+                        <tr class="table-heading">
                             <th>#</th><th>Name</th><th>Price</th>
                         </tr>
                     </thead>

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Decentralized Ecommerce</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/responsive.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -12,7 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js" integrity="sha512-jRzb6jM5wynT5UHyMW2+SD+yLsYPEU5uftImpzOcVTdu1J7VsynVmiuFTsitsoL5PJVQi+OtWbrpWq/I+kkF4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
-<body>
+<body style ="background-color: rgb(20, 47, 67);">
     <nav class="navbar navbar-dark bg-dark" id="nav-title">
         <div class="container-fluid">
           <a class="navbar-brand" href="../">
@@ -21,6 +26,13 @@
           </a>
         </div>
       </nav>
+      <div class="shop-title">
+        <h1 class="shop-heading">SALE ZONE</h1>
+        <a href="admin" class="know-more" id="dashboard">ADMIN DASHBOARD</a>
+
+      </div>
+      
+      
       <div class="row">
         {% for product in products %}
         <div class="col-lg-3">
