@@ -54,6 +54,10 @@ class AddProduct(FlaskForm):
 def home():
     return render_template('index.html')
 
+@app.route("/knowmore", methods=['GET', 'POST'])
+def knowmore():
+    return render_template('knowmore.html')
+
 @app.route("/wastecheck", methods=['GET', 'POST'])
 def wastecheck():
     return render_template('WasteCheck.html')
@@ -63,12 +67,12 @@ def predict():
     if request.method == 'POST':
         file = request.files['file']
         filename = file.filename
-        file_path = os.path.join(r'D:/PAL/CS/Github/webtech-hackreva/static/',filename)                       #slashes should be handeled properly
+        file_path = os.path.join(r'D:/PAL/CS/Github/webtech-hackreva/images/',filename)                       #slashes should be handeled properly
         file.save(file_path)
         product = prediction(file_path)
         print(product)
         if product == 'Organic':
-            return render_template('organic.html', product = 'organic', image = filename)
+            return render_template('paper.html', product = 'organic', image = filename)
         elif product == 'Plastic':
             return render_template('plastic.html', product = 'plastic', image = filename)
         elif product == 'Recyclable':
