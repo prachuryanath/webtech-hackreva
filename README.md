@@ -1,9 +1,10 @@
 # WebTech
 
 ## Team members
+Prachurya Nath (Leader)
+
 Adrita Buragohain 
 
-Prachurya Nath 
 
 ## College name
 National Institute of Technology, Silchar
@@ -23,4 +24,8 @@ We provide an easy solution to a big problem of waste management through deep le
 2. Install the required packages.
 3. Run using 'flask run'.
 
+## Link to presentation
+https://docs.google.com/document/d/1f5QVZynP9K9uBSp8ChxX4U5VfHpRD4sd/edit
 
+## Link to demo video
+https://youtu.be/GwAll8rKcoE
