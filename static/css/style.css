@@ -3,7 +3,6 @@
     padding: 0;
     font-family: 'Mochiy Pop P One', sans-serif;
     box-sizing: border-box;
-   
 }
 
 body{
@@ -299,7 +298,6 @@ body{
     text-shadow:  0 0 5px white,
     0 0 25px white,
     0 0 50px white; 
-
     padding: 0 30px;
 }
 .caption{
@@ -354,4 +352,17 @@ body{
 
 .table-heading{
     color:yellow;
+}
+.button-add{
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+.form-group img {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
 }
