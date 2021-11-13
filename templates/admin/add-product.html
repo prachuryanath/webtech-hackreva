@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Decentralized Ecommerce</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}"/>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/responsive.css') }}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
       </div>
       
       <div class="row">
-          <div class="col-lg">
+          <div class="col-lg-10 col-lg-offset-1">
               <div class="panel panel-default">
                   <form method="POST" action="{{ url_for('add') }}" enctype="multipart/form-data">
                       <div class="panel-body">
@@ -71,7 +71,7 @@
                       </div>
       
                       <div class="panel-footer">
-                          <button type="submit" class="btn btn-primary button-add">
+                          <button type="submit" class="btn btn-primary">
                               <i class="glyphicon glyphicon-plus-sign"></i> Save Product
                           </button>
                       </div>

@@ -13,10 +13,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, TextAreaField, HiddenField, SelectField
 from flask_wtf.file import FileField, FileAllowed
 import random
-# from model import get_model,load_image, prediction
+from model import get_model,load_image, prediction
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-# get_model()
+get_model()
 
 photos = UploadSet('photos', IMAGES)
 
@@ -62,26 +62,21 @@ def knowmore():
 def wastecheck():
     return render_template('WasteCheck.html')
 
-# @app.route("/predict", methods = ['GET','POST'])
-# def predict():
-#     if request.method == 'POST':
-#         file = request.files['file']
-#         filename = file.filename
-#         file_path = os.path.join(r'D:/PAL/CS/Github/webtech-hackreva/images/',filename)                       #slashes should be handeled properly
-#         file.save(file_path)
-#         product = prediction(file_path)
-#         print(product)
-#         if product == 'Organic':
-#             return render_template('paper.html', product = 'organic', image = filename)
-#         elif product == 'Plastic':
-#             return render_template('plastic.html', product = 'plastic', image = filename)
-#         elif product == 'Recyclable':
-#             return render_template('recyclable.html', product = 'recyclable', image = filename)
-
-# @app.route('/donate')
-# def index():
-#     products = get_products()
-#     return render_template('donate.html', products=products)
+@app.route("/predict", methods = ['GET','POST'])
+def predict():
+    if request.method == 'POST':
+        file = request.files['file']
+        filename = file.filename
+        file_path = os.path.join(r'D:/PAL/CS/Github/webtech-hackreva/images/',filename)                       #slashes should be handeled properly
+        file.save(file_path)
+        product = prediction(file_path)
+        print(product)
+        if product == 'Organic':
+            return render_template('paper.html', product = 'organic', image = filename)
+        elif product == 'Plastic':
+            return render_template('plastic.html', product = 'plastic', image = filename)
+        elif product == 'Recyclable':
+            return render_template('recyclable.html', product = 'recyclable', image = filename)
 
 @app.route('/try', methods=['GET'])
 def index():
