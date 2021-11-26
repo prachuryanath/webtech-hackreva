@@ -356,6 +356,14 @@ body{
     color:yellow;
 }
 
+.button-add{
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
 .form-group img {
     width: 200px; /* You can set the dimensions to whatever you want */
     height: 200px;

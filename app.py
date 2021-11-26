@@ -78,6 +78,11 @@ def predict():
         elif product == 'Recyclable':
             return render_template('recyclable.html', product = 'recyclable', image = filename)
 
+# @app.route('/donate')
+# def index():
+#     products = get_products()
+#     return render_template('donate.html', products=products)
+
 @app.route('/try', methods=['GET'])
 def index():
     products = Product.query.all()
