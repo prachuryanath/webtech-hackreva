@@ -1,10 +1,10 @@
-# WebTech
+# WasteCheck 
+Selected as Top 10 Team in [RevaHack21](https://revahack.com/)
 
 ## Team members
-Prachurya Nath (Leader)
+[Adrita Buragohain](https://github.com/Adrita2002)
 
-Adrita Buragohain 
-
+Prachurya Nath 
 
 ## College name
 National Institute of Technology, Silchar
@@ -21,11 +21,16 @@ We provide an easy solution to a big problem of waste management through deep le
  
 ## How to Run
 1. Clone the repository.
-2. Install the required packages.
-3. Run using 'flask run'.
+2. Change directory to the repository folder
+3. `pip install requirements.txt` for installing packages
+4. Run using `flask run`.
 
 ## Link to presentation
 https://docs.google.com/document/d/1f5QVZynP9K9uBSp8ChxX4U5VfHpRD4sd/edit
 
-## Link to demo video
+## Link to youtube video
+
 https://youtu.be/GwAll8rKcoE
+
+## Link to submission
+https://devfolio.co/submissions/wastecheck-6b56
